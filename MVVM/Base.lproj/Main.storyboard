@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" delaysContentTouches="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-r3-RTb">
+                                <rect key="frame" x="40" y="245" width="488" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.64916314959999999" blue="0.1599638025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cix-du-LWa"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-cr-DTH">
+                                <rect key="frame" x="10" y="47" width="548" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="xzS-au-T70"/>
+                                </constraints>
+                                <segments>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-OL-AJD">
+                                <rect key="frame" x="209" y="85" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GWM-NS-Gcb"/>
+                                    <constraint firstAttribute="height" constant="150" id="aAo-3v-JNZ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTr-1k-RCe">
+                                <rect key="frame" x="10" y="7" width="548" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Ha-2y-Roj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-y7-fhU">
+                                <rect key="frame" x="120" y="295" width="328" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Saw-cr-DTH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1j3-re-q9Q"/>
+                            <constraint firstItem="FQZ-OL-AJD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6kx-bA-LZQ"/>
+                            <constraint firstItem="Euq-y7-fhU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="AOL-rc-Wmf"/>
+                            <constraint firstItem="fTr-1k-RCe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B1C-UR-c1M"/>
+                            <constraint firstItem="4fe-r3-RTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiV-yX-LgY"/>
+                            <constraint firstItem="FQZ-OL-AJD" firstAttribute="top" secondItem="Saw-cr-DTH" secondAttribute="bottom" constant="10" id="Ker-er-2Wn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fe-r3-RTb" secondAttribute="trailing" constant="40" id="NSv-dL-ryk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Saw-cr-DTH" secondAttribute="trailing" constant="10" id="OVy-zm-0zh"/>
+                            <constraint firstItem="4fe-r3-RTb" firstAttribute="top" secondItem="FQZ-OL-AJD" secondAttribute="bottom" constant="10" id="VQt-zL-Muu"/>
+                            <constraint firstItem="Saw-cr-DTH" firstAttribute="top" secondItem="fTr-1k-RCe" secondAttribute="bottom" constant="10" id="Vgr-eU-ygU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Euq-y7-fhU" secondAttribute="trailing" constant="120" id="Vqb-Pd-d4C"/>
+                            <constraint firstItem="Euq-y7-fhU" firstAttribute="top" secondItem="4fe-r3-RTb" secondAttribute="bottom" constant="20" id="ZWm-aP-0dM">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="4fe-r3-RTb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ceg-Io-6wN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTr-1k-RCe" secondAttribute="trailing" constant="10" id="d4k-Yl-xRc"/>
+                            <constraint firstItem="FQZ-OL-AJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="foD-kJ-WEc"/>
+                            <constraint firstItem="fTr-1k-RCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jxN-pt-wFq"/>
+                            <constraint firstItem="Euq-y7-fhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tY9-mG-AcZ"/>
+                            <constraint firstItem="Saw-cr-DTH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vWv-qy-0Qp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="age" destination="Euq-y7-fhU" id="I1C-LF-YDC"/>
+                        <outlet property="imageView" destination="FQZ-OL-AJD" id="oLB-QB-yuO"/>
+                        <outlet property="selector" destination="Saw-cr-DTH" id="199-3S-vhk"/>
+                        <outlet property="textBlok" destination="4fe-r3-RTb" id="x9r-Mr-VsL"/>
+                        <outlet property="textField" destination="fTr-1k-RCe" id="oEE-tA-Fgv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
