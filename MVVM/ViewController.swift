@@ -25,17 +25,17 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         parser.getParsedData {
             data in
             
-            self.textBlok.text = data.data?[0].data?.text
-            self.textField.placeholder = data.data?[0].data?.text
-            let variant1 = data.data?[2].data?.variants?[0].text
-            let variant2 = data.data?[2].data?.variants?[1].text
-            let variant3 = data.data?[2].data?.variants?[2].text
+            self.textBlok.text = data.data[0]?.data.text
+            self.textField.placeholder = data.data[0]?.data.text
+            let variant1 = data.data[2]?.data.variants[0].text
+            let variant2 = data.data[2]?.data.variants[1].text
+            let variant3 = data.data[2]?.data.variants[2].text
             self.selector.setTitle(variant1, forSegmentAt: 0)
             self.selector.setTitle(variant2, forSegmentAt: 1)
             self.selector.setTitle(variant3, forSegmentAt: 2)
             
             
-            let string: String = (data.data?[1].data?.url)!
+            let string: String = (data.data[1]?.data.url)!
             self.imageView.setImage(string, placeholder: "Image")
         }
         
@@ -55,19 +55,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @objc func textBlokTapped(sender: UITapGestureRecognizer) {
        parser.getParsedData(comp: { (Json) in
-        self.age.text = Json.data?[0].name
+        self.age.text = Json.data[0]?.name
         })
     }
     
     @objc func textFieldTapped(sender: UITapGestureRecognizer) {
         parser.getParsedData(comp: { (Json) in
-            self.age.text = Json.data?[0].name
+            self.age.text = Json.data[0]?.name
         })
         
     }
     @objc func viewTapped(sender: UITapGestureRecognizer) {
         parser.getParsedData { (Json) in
-            self.age.text = Json.data?[1].name
+            self.age.text = Json.data[1]?.name
             print("привет")
         }
     }
@@ -77,20 +77,20 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             switch target.selectedSegmentIndex {
             case 0:
                 parser.getParsedData { (Json) in
-                    let id = Json.data?[2].data?.variants?[0].id
-                        self.age.text = "ID \(String(describing: id))"
+                    let id = Json.data[2]?.data.variants[0].id
+                        self.age.text = "ID \(String(describing: id!))"
                     
                 }
             case 1:
                 parser.getParsedData { (Json) in
-                    let id = Json.data?[2].data?.variants?[1].id
-                       self.age.text = "ID \(String(describing: id))"
+                    let id = Json.data[2]?.data.variants[1].id
+                       self.age.text = "ID \(String(describing: id!))"
                     
                 }
             case 2:
                 parser.getParsedData { (Json) in
-                    let id = Json.data?[2].data?.variants?[2].id
-                        self.age.text = "ID \(String(describing: id))"
+                    let id = Json.data[2]?.data.variants[2].id
+                        self.age.text = "ID \(String(describing: id!))"
             
                 }
             default:

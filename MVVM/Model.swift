@@ -10,24 +10,24 @@ import Foundation
 
 
 struct Json: Decodable {
-    var data: [data]?
-    var view: [String]?
+    var data: [data?]
+    var view: [String?]
 }
 
 struct data: Decodable{
-    var name: String?
-    var data: data1?
+    var name: String!
+    var data: data1!
 }
 
 struct data1: Decodable {
-    var text: String?
-    var selectedId: Int?
-    var url: String?
-    var variants: [variants]?
+    var text: String!
+    var selectedId: Int!
+    var url: String!
+    var variants: [variants]!
 }
 
 struct variants: Decodable {
-    var id: Int?
-    var text: String?
+    var id: Int!
+    var text: String!
 }
 

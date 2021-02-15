@@ -12,7 +12,7 @@ import Alamofire
 struct Parser {
 
     func getParsedData(comp: @escaping (Json)->()){
-        let request = Alamofire.request("https://pryaniky.com/static/json/sample.json", method: .get, encoding: JSONEncoding.default)
+        _ = Alamofire.request("https://pryaniky.com/static/json/sample.json", method: .get, encoding: JSONEncoding.default)
             .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
                 print("Progress: \(progress.fractionCompleted)")
             }
@@ -23,9 +23,9 @@ struct Parser {
             .responseJSON { response in
                 guard let data = response.data else {return}
                 let json = try! JSONDecoder.init().decode(Json.self, from: data)
-                let jsonData = json.data
-                let name = jsonData?[0].name
-                let hZdata = jsonData?[0].data?.text
+                //let jsonData = json.data
+                //let name = jsonData[0]?.name
+                //let hZdata = jsonData[0]?.data?.text
                 comp(json)
         }
     }
